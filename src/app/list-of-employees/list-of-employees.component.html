@@ -9,8 +9,9 @@
             <th>Name</th>
             <th>Age</th>
             <th>Gender</th>
-            <th>Actions</th>
             <th>Salary</th>
+            <th>Actions</th>
+          
           </tr>
         </thead>
         <tbody>
@@ -18,12 +19,13 @@
             <td>{{employee.name}}</td>
             <td>{{employee.age}}</td>
             <td>{{employee.gender}}</td>
+            <td>{{employee.salary.ssalary}}</td>
             <td><button (click)="deleteEmployee(employee.id)" class="btn btn-danger">Delete</button>
                 <button (click)="employeeDetails(employee.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
                 <button (click)="updateEmployee(employee.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
             </td>
             
-              <td *ngfor ="let salalry of salaries | async">{{salalry.salary}}</td>
+             
           
           </tr>
         </tbody>

@@ -17,7 +17,7 @@ export class ListOfEmployeesComponent implements OnInit {
  // dtOptions: DataTables.Settings = {};
   //dtTrigger: Subject<any>= new Subject();  
   employees: Observable<Employee[]> ;
-  salaries: Observable<Employee[]> ;
+  
   dataTable: any;
   constructor(private employeeService: EmployeeService,
     private router: Router) { }
@@ -35,7 +35,7 @@ export class ListOfEmployeesComponent implements OnInit {
   
   reloadData() {
     this.employees =this.employeeService.getEmployeesList();
-    this.salaries=this.employeeService.getEmployeesList();
+  
     
     };
     

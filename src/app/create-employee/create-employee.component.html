@@ -1,4 +1,5 @@
 <h3>Create Employee</h3>
+<ng-container *ngIf="employee">
 <div [hidden]="submitted" style="width: 400px;">
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
@@ -7,13 +8,17 @@
     </div>
 
     <div class="form-group">
-      <label for="name"> Gender</label>
+      <label for="Gender"> Gender</label>
       <input type="text" class="form-control" id="Gender" required [(ngModel)]="employee.gender" name="Gender">
     </div>
 
     <div class="form-group">
-      <label for="name">Age</label>
+      <label for="Age">Age</label>
       <input type="text" class="form-control" id="Age" required [(ngModel)]="employee.age" name="Age">
+    </div>
+    <div class="form-group">
+      <label for="Salary">Salary</label>
+      <input type="text" class="form-control"  required [(ngModel)]="employee.salary.ssalary" name="Salary">
     </div>
 
     <button type="submit" class="btn btn-success">Submit</button>
@@ -24,3 +29,4 @@
   <h4>You submitted successfully!</h4>
   <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
 </div>
+</ng-container>

@@ -2,6 +2,7 @@ import { EmployeeService } from '../employee.service';
 import { Employee } from '../employee';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-create-employee',
@@ -9,7 +10,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./create-employee.component.css']
 })
 export class CreateEmployeeComponent implements OnInit {
-  employee: Employee = new Employee();
+ // employee: Employee = new Employee();
+  employee: Employee= {} as Employee;
   submitted = false;
   constructor(private employeeService: EmployeeService,
     private router: Router) { }
@@ -19,6 +21,7 @@ export class CreateEmployeeComponent implements OnInit {
   newEmployee(): void {
     this.submitted = false;
     this.employee = new Employee();
+    console.log(this.employee);
   }
   save() {
    
